@@ -405,8 +405,8 @@ end
 __END__
 diff --git a/build/php.m4 b/build/php.m4
 index 168c465f8d..6c087d152f 100644
---- a/acinclude.m4
-+++ b/acinclude.m4
+--- a/build/php.m4
++++ b/build/php.m4
 @@ -441,7 +441,11 @@ dnl
  dnl Adds a path to linkpath/runpath (LDFLAGS)
  dnl
