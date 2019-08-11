@@ -115,8 +115,6 @@ class PhpAT74 < Formula
       --with-icu-dir=#{Formula["icu4c"].opt_prefix}
       --with-jpeg-dir=#{Formula["jpeg"].opt_prefix}
       --with-layout=GNU
-      --with-ldap=#{Formula["openldap"].opt_prefix}
-      --with-ldap-sasl#{headers_path}
       --with-libxml-dir#{headers_path}
       --with-libedit#{headers_path}
       --with-libzip
