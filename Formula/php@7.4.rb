@@ -25,6 +25,7 @@ class PhpAT74 < Formula
   depends_on "libpq"
   depends_on "libsodium"
   depends_on "libzip"
+  depends_on "oniguruma"
   depends_on "openldap"
   depends_on "openssl"
   depends_on "sqlite"
