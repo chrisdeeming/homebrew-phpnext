@@ -46,6 +46,15 @@ class PhpAT74 < Formula
 
     # buildconf required due to system library linking bug patch
     system "./buildconf", "--force"
+    
+    inreplace "configure" do |s|
+      s.gsub! "APACHE_THREADED_MPM=`$APXS_HTTPD -V 2>/dev/null | grep 'threaded:.*yes'`",
+              "APACHE_THREADED_MPM="
+      s.gsub! "APXS_LIBEXECDIR='$(INSTALL_ROOT)'`$APXS -q LIBEXECDIR`",
+              "APXS_LIBEXECDIR='$(INSTALL_ROOT)#{lib}/httpd/modules'"
+      s.gsub! "-z `$APXS -q SYSCONFDIR`",
+              "-z ''"
+    end
 
     # Update error message in apache sapi to better explain the requirements
     # of using Apache http in combination with php if the non-compatible MPM
