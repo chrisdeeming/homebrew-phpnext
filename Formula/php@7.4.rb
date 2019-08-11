@@ -25,8 +25,6 @@ class PhpAT74 < Formula
   depends_on "libpq"
   depends_on "libsodium"
   depends_on "libzip"
-  depends_on "krb5-gssapi"
-  depends_on "krb5-gssapi"
   depends_on "openldap"
   depends_on "openssl"
   depends_on "sqlite"
@@ -116,7 +114,6 @@ class PhpAT74 < Formula
       --with-iconv#{headers_path}
       --with-icu-dir=#{Formula["icu4c"].opt_prefix}
       --with-jpeg-dir=#{Formula["jpeg"].opt_prefix}
-      --with-kerberos#{headers_path}
       --with-layout=GNU
       --with-ldap=#{Formula["openldap"].opt_prefix}
       --with-ldap-sasl#{headers_path}
