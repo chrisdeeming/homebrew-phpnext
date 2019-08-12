@@ -276,7 +276,7 @@ class PhpAT74 < Formula
   end
 
   def php_version
-    version.to_s.split(".")[0..1].join(".")
+    7.4
   end
 
   plist_options :manual => "php-fpm"
